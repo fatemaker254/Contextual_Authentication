@@ -56,7 +56,7 @@ def authenticate(user, sample_vector, threshold):
 
     confidence = clf.predict_proba(sample_scaled)[0][1]
 
-    print(f"Confidence: {confidence:.4f}")
+    print(f"Confidence: {confidence*100}%")
 
     if confidence >= threshold:
         print("Authentication: ACCEPTED")
